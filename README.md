@@ -27,7 +27,7 @@ This guide assumes you're using **VSCode IDE**. If you don't have it yet, [downl
 1. Open **VSCode IDE**
 2. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
 3. Type "Git: Clone" and select it
-4. Paste: `https://github.com/fperez2511/Azure-Devops-MCP-Server-For-VSCode.git`
+4. Paste: `https://github.com/fperez2511/ADOMCPLocalServer.git`
 5. Choose where to save it (remember this location!)
 6. Click "Open" when VSCode asks
 
@@ -301,7 +301,7 @@ Then restart the server in VSCode settings (disable/enable).
 3. Use **forward slashes** in the path
 4. **Restart VSCode** after any changes
 
-**Need help?** Open an issue: https://github.com/fperez2511/Azure-Devops-MCP-Server-For-VSCode/issues
+**Need help?** Open an issue: https://github.com/fperez2511/ADOMCPLocalServer/issues
 
 ---
 

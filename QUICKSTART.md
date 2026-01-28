@@ -10,7 +10,7 @@
 ### 1️⃣ Clone & Build (in VSCode)
 ```bash
 # In VSCode terminal (Ctrl+`)
-git clone https://github.com/fperez2511/Azure-Devops-MCP-Server-For-VSCode.git
+git clone https://github.com/fperez2511/ADOMCPLocalServer.git
 cd ADOMCPLocalServer
 npm install
 npm run build
