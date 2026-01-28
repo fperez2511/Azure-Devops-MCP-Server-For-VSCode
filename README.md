@@ -22,7 +22,7 @@ This guide assumes you're using **VSCode IDE**. If you don't have it yet, [downl
 
 ## 📦 Installation Guide (5 minutes)
 
-### 🎯 Step 1: Clone the Project **IN CURSOR**
+### 🎯 Step 1: Clone the Project **IN VSCode**
 
 1. Open **VSCode IDE**
 2. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
@@ -33,7 +33,7 @@ This guide assumes you're using **VSCode IDE**. If you don't have it yet, [downl
 
 **You're now in the project folder in VSCode!** ✅
 
-### 🔨 Step 2: Install Dependencies **IN CURSOR**
+### 🔨 Step 2: Install Dependencies **IN VSCode**
 
 1. In VSCode, press `` Ctrl+` `` to open the terminal
 2. You should see something like `C:\...\ADOMCPLocalServer>`
@@ -127,7 +127,7 @@ ADOMCPLocalServer/
 ```json
 {
   "mcpServers": {
-    "azure-devops": {
+    "azure-devops-mcp-local": {
       "command": "node",
       "args": ["C:/PATH/TO/YOUR/ADOMCPLocalServer/dist/index.js"]
     }
@@ -296,12 +296,12 @@ Then restart the server in VSCode settings (disable/enable).
 
 ## 🐛 Still Having Issues?
 
-1. Make sure you're using **VSCode IDE** (not VS Code)
+1. Make sure you're using **VSCode IDE**
 2. Check the .env file is in the **root folder**
 3. Use **forward slashes** in the path
 4. **Restart VSCode** after any changes
 
-**Need help?** Open an issue: https://github.com/EreAlexandru/ADOMCPLocalServer/issues
+**Need help?** Open an issue: https://github.com/fperez2511/Azure-Devops-MCP-Server-For-VSCode/issues
 
 ---
 
