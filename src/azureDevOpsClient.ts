@@ -1,8 +1,39 @@
 import axios, { AxiosInstance } from 'axios';
 import { config } from 'dotenv';
+import * as path from 'path';
+import * as fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-// Load environment variables
-config();
+// ES module equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load environment variables from project root
+// Try multiple possible locations for the .env file
+const possibleEnvPaths = [
+  path.join(process.cwd(), '.env'),                    // Current working directory
+  path.join(__dirname, '..', '.env'),                 // Parent of dist directory (where src was)
+  path.join(__dirname, '..', '..', '.env'),           // Parent of dist directory
+  path.join(__dirname, '.env'),                       // Same directory
+];
+
+let envPath = '';
+for (const tryPath of possibleEnvPaths) {
+  if (fs.existsSync(tryPath)) {
+    envPath = tryPath;
+    break;
+  }
+}
+
+if (envPath) {
+  console.error(`DEBUG: Loading .env from: ${envPath}`);
+  config({ path: envPath });
+} else {
+  console.error(`DEBUG: No .env file found in any of these locations:`);
+  possibleEnvPaths.forEach(p => console.error(`  - ${p}`));
+  config(); // Fall back to default behavior
+}
 
 interface WorkItemUpdate {
   title?: string;
@@ -33,6 +64,11 @@ export class AzureDevOpsClient {
   private requestResetTime: number = Date.now();
 
   constructor() {
+    console.error(`DEBUG: Looking for .env file at: ${path.join(__dirname, '..', '.env')}`);
+    console.error(`DEBUG: AZURE_DEVOPS_ORG = ${process.env.AZURE_DEVOPS_ORG}`);
+    console.error(`DEBUG: AZURE_DEVOPS_PAT exists = ${!!process.env.AZURE_DEVOPS_PAT}`);
+    console.error(`DEBUG: AZURE_DEVOPS_EXT_PAT exists = ${!!process.env.AZURE_DEVOPS_EXT_PAT}`);
+    
     this.organization = process.argv[2] || process.env.AZURE_DEVOPS_ORG || '';
     this.pat = process.env.AZURE_DEVOPS_PAT || process.env.AZURE_DEVOPS_EXT_PAT || '';
 

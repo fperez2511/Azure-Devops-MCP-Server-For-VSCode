@@ -122,4 +122,15 @@ export async function handleGetBuildChanges(
   top?: number
 ) {
   return await adoClient.getBuildChanges(project, buildId, top);
-} 
+}
+
+/**
+ * List projects
+ * @param adoClient - The Azure DevOps client instance
+ * @returns MCP-formatted response with projects
+ */
+export async function handleListProjects(
+  adoClient: AzureDevOpsClient
+) {
+  return await adoClient.listProjects();
+}
