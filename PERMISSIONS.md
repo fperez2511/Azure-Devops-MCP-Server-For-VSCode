@@ -46,7 +46,7 @@ When creating your PAT, select **"Custom defined"** and check these boxes:
 3. **You control everything**
    - Revoke the token anytime from Azure DevOps
    - Set expiration (90 days recommended)
-   - Each action still requires your command in Cursor
+   - Each action still requires your command in VSCode
 
 ## ❓ Common Questions
 

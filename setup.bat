@@ -1,7 +1,7 @@
 @echo off
 cls
 echo ========================================
-echo     Azure DevOps MCP Setup for Cursor
+echo     Azure DevOps MCP Setup for VSCode
 echo ========================================
 echo.
 echo This will create your .env file in the CORRECT location!
@@ -60,11 +60,11 @@ echo.
 echo Your credentials have been saved.
 echo.
 echo ========================================
-echo 🔌 Next: Add to Cursor Settings
+echo 🔌 Next: Add to VSCode Settings
 echo ========================================
 echo.
-echo 1. Open Cursor
-echo 2. Go to: File → Preferences → Cursor Settings
+echo 1. Open VSCode
+echo 2. Go to: File → Preferences → VSCode Settings
 echo 3. Find: Tools ^& Integration
 echo 4. Click: New MCP Server
 echo 5. DELETE everything and paste this:
@@ -78,7 +78,7 @@ echo     }
 echo   }
 echo }
 echo.
-echo 6. IMPORTANT: Restart Cursor after adding!
+echo 6. IMPORTANT: Restart VSCode after adding!
 echo.
 echo ========================================
 echo 🧪 To test your connection later, run:

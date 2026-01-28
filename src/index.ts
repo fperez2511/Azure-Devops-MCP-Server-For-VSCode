@@ -1,5 +1,5 @@
 /**
- * Azure DevOps MCP Server for Cursor (PAT Auth, No CLI Required)
+ * Azure DevOps MCP Server for VSCode (PAT Auth, No CLI Required)
  * Enhanced with Microsoft parity - 60+ tools, no Azure CLI required
  */
 
@@ -38,7 +38,7 @@ function getAdoClient(): AzureDevOpsClient {
 // Create MCP server with enhanced capabilities
 const server = new Server(
   {
-    name: 'azure-devops-mcp-cursor',
+    name: 'azure-devops-mcp-local',
     version: packageVersion,
   },
   {

@@ -1,10 +1,10 @@
-# Azure DevOps MCP Server for Cursor 🚀
+# Azure DevOps MCP Server for VSCode 🚀
 
-**Built specifically for Cursor IDE** - Control Azure DevOps with natural language!
+**Built specifically for VSCode IDE** - Control Azure DevOps with natural language!
 
 ## ⚡ What is this?
 
-A tool that lets you talk to Azure DevOps in plain English, right from Cursor's chat. No commands to memorize!
+A tool that lets you talk to Azure DevOps in plain English, right from VSCode's chat. No commands to memorize!
 
 **Examples:**
 - *"Show my work items"*
@@ -14,9 +14,9 @@ A tool that lets you talk to Azure DevOps in plain English, right from Cursor's 
 
 ---
 
-## 🚨 IMPORTANT: Do Everything in Cursor When Possible! 🚨
+## 🚨 IMPORTANT: Do Everything in VSCode When Possible! 🚨
 
-This guide assumes you're using **Cursor IDE**. If you don't have it yet, [download Cursor here](https://cursor.sh/).
+This guide assumes you're using **VSCode IDE**. If you don't have it yet, [download VSCode here](https://code.visualstudio.com/download/).
 
 ---
 
@@ -24,18 +24,18 @@ This guide assumes you're using **Cursor IDE**. If you don't have it yet, [downl
 
 ### 🎯 Step 1: Clone the Project **IN CURSOR**
 
-1. Open **Cursor IDE**
+1. Open **VSCode IDE**
 2. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
 3. Type "Git: Clone" and select it
-4. Paste: `https://github.com/EreAlexandru/ADOMCPLocalServer.git`
+4. Paste: `https://github.com/fperez2511/Azure-Devops-MCP-Server-For-VSCode.git`
 5. Choose where to save it (remember this location!)
-6. Click "Open" when Cursor asks
+6. Click "Open" when VSCode asks
 
-**You're now in the project folder in Cursor!** ✅
+**You're now in the project folder in VSCode!** ✅
 
 ### 🔨 Step 2: Install Dependencies **IN CURSOR**
 
-1. In Cursor, press `` Ctrl+` `` to open the terminal
+1. In VSCode, press `` Ctrl+` `` to open the terminal
 2. You should see something like `C:\...\ADOMCPLocalServer>`
 3. Type these commands:
    ```bash
@@ -60,7 +60,7 @@ This guide assumes you're using **Cursor IDE**. If you don't have it yet, [downl
    - If it's `https://contoso.visualstudio.com/` → org is `contoso`
 
 2. Click **"+ New Token"**
-3. Name it: "Cursor MCP"
+3. Name it: "VSCode MCP"
 4. Expiration: 90 days (recommended)
 5. Scopes: Click **"Custom defined"** then check:
    - ✅ Work Items (Read, Write & Manage)
@@ -76,8 +76,8 @@ This guide assumes you're using **Cursor IDE**. If you don't have it yet, [downl
 
 #### ⚠️ CRITICAL: The .env file goes in the ROOT folder, NOT in src/ or dist/! ⚠️
 
-**Option A: Using Cursor (Recommended)** 👈
-1. In Cursor, right-click on the **root folder** (ADOMCPLocalServer)
+**Option A: Using VSCode (Recommended)** 👈
+1. In VSCode, right-click on the **root folder** (ADOMCPLocalServer)
 2. Select "New File"
 3. Name it exactly: `.env` (yes, starting with a dot!)
 4. Paste this (replace with your values):
@@ -117,9 +117,9 @@ ADOMCPLocalServer/
 └── README.md
 ```
 
-### 🔌 Step 5: Connect to Cursor
+### 🔌 Step 5: Connect to VSCode
 
-1. In Cursor, go to **File → Preferences → Cursor Settings**
+1. In VSCode, go to **File → Preferences → VSCode Settings**
 2. In the left sidebar, find **"Tools & Integration"**
 3. Click **"New MCP Server"**
 4. **DELETE EVERYTHING** in the box and paste this:
@@ -138,7 +138,7 @@ ADOMCPLocalServer/
 5. **IMPORTANT:** Replace `C:/PATH/TO/YOUR/` with your actual path!
    
    **How to find your path:**
-   - In Cursor, look at the top of the window
+   - In VSCode, look at the top of the window
    - Or right-click on any file → "Copy Path"
    - Use FORWARD SLASHES (/) not backslashes (\)
    
@@ -149,13 +149,13 @@ ADOMCPLocalServer/
 
 6. Click outside the box to save
 
-### 🔄 Step 6: Restart Cursor
+### 🔄 Step 6: Restart VSCode
 
-**THIS IS REQUIRED!** Close Cursor completely and open it again.
+**THIS IS REQUIRED!** Close VSCode completely and open it again.
 
 ### ✅ Step 7: Verify It Works
 
-1. After restarting, go to **File → Preferences → Cursor Settings → Tools & Integration**
+1. After restarting, go to **File → Preferences → VSCode Settings → Tools & Integration**
 2. Find "azure-devops" in the list
 3. **You should see a green dot ✅** = Connected!
 4. Click on it to see all 60+ available tools
@@ -164,7 +164,7 @@ ADOMCPLocalServer/
 
 ### 🎉 Step 8: Test It!
 
-1. Open a new chat in Cursor (Ctrl+L)
+1. Open a new chat in VSCode (Ctrl+L)
 2. Type: "List my Azure DevOps projects"
 3. You should see your projects!
 
@@ -178,7 +178,7 @@ Double-click `check-env.bat` to automatically check your setup!
 ### ❌ Common Issues
 
 **"No green dot / Not connected"**
-1. Did you restart Cursor after adding the server?
+1. Did you restart VSCode after adding the server?
 2. Is your path correct in settings? (forward slashes!)
 3. Did you run `npm run build`?
 4. Is the .env file in the ROOT folder?
@@ -199,11 +199,11 @@ Double-click `check-env.bat` to automatically check your setup!
   ```
 
 **To verify your .env location:**
-1. In Cursor terminal, type: `dir .env` (Windows) or `ls -la .env` (Mac/Linux)
+1. In VSCode terminal, type: `dir .env` (Windows) or `ls -la .env` (Mac/Linux)
 2. You should see the file listed
 
 ### 🧪 Test Your Connection
-Run this in the Cursor terminal:
+Run this in the VSCode terminal:
 ```bash
 node test-connection.js
 ```
@@ -217,7 +217,7 @@ This will show:
 
 ## 💬 What You Can Ask
 
-Just type naturally in Cursor's chat:
+Just type naturally in VSCode's chat:
 
 **Daily Tasks:**
 - "Show my active work items"
@@ -290,16 +290,16 @@ The AI will guide you step-by-step through each process!
 npm run build
 ```
 
-Then restart the server in Cursor settings (disable/enable).
+Then restart the server in VSCode settings (disable/enable).
 
 ---
 
 ## 🐛 Still Having Issues?
 
-1. Make sure you're using **Cursor IDE** (not VS Code)
+1. Make sure you're using **VSCode IDE** (not VS Code)
 2. Check the .env file is in the **root folder**
 3. Use **forward slashes** in the path
-4. **Restart Cursor** after any changes
+4. **Restart VSCode** after any changes
 
 **Need help?** Open an issue: https://github.com/EreAlexandru/ADOMCPLocalServer/issues
 

@@ -100,8 +100,8 @@ if %ISSUES%==0 (
     echo ✅ Everything looks good!
     echo.
     echo Next steps:
-    echo 1. Make sure Cursor is configured with the correct path
-    echo 2. Restart Cursor if you haven't already
+    echo 1. Make sure VSCode is configured with the correct path
+    echo 2. Restart VSCode if you haven't already
     echo 3. Test with: node test-connection.js
 ) else (
     echo ❌ Found %ISSUES% issue(s) that need fixing:

@@ -1,14 +1,14 @@
 # Security Guide for Azure DevOps MCP Server
 
 ## Overview
-This document outlines the security measures and best practices for using the Azure DevOps MCP Server with Cursor IDE.
+This document outlines the security measures and best practices for using the Azure DevOps MCP Server with VSCode IDE.
 
 ## Security Architecture
 
 ### 1. Local-Only Execution
 - **No Cloud Hosting**: The server runs entirely on your local machine
 - **No Network Exposure**: Uses stdio (standard input/output) instead of network ports
-- **Process Isolation**: Runs as a child process of Cursor IDE
+- **Process Isolation**: Runs as a child process of VSCode IDE
 
 ### 2. Authentication Security
 

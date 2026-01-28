@@ -49,7 +49,7 @@ C:/Users/YourName/.env  ← ❌ WRONG! Outside the project!
 
 ## 🔍 How to Check:
 
-1. Open Cursor terminal (`` Ctrl+` ``)
+1. Open VSCode terminal (`` Ctrl+` ``)
 2. Make sure you're in the ADOMCPLocalServer folder
 3. Type:
    - Windows: `dir .env`
@@ -65,7 +65,7 @@ C:/Users/YourName/.env  ← ❌ WRONG! Outside the project!
 
 ## 🆘 Still Confused?
 
-Run this command in Cursor terminal:
+Run this command in VSCode terminal:
 ```bash
 node check-env.bat
 ```

@@ -83,7 +83,7 @@ echo 1. Create a .env file in this folder with:
 echo    AZURE_DEVOPS_ORG=your-org-name
 echo    AZURE_DEVOPS_PAT=your-token
 echo.
-echo 2. In Cursor: Tools ^& Integration ^> New MCP Server ^> Paste this:
+echo 2. In VSCode: Tools ^& Integration ^> New MCP Server ^> Paste this:
 echo    {
 echo      "mcpServers": {
 echo        "azure-devops": {
@@ -93,6 +93,6 @@ echo        }
 echo      }
 echo    }
 echo.
-echo 3. Restart Cursor
+echo 3. Restart VSCode
 echo.
 pause 

@@ -1,16 +1,16 @@
 # ⚡ Quick Start Guide (2 minutes)
 
 ## Prerequisites
-- ✅ [Cursor IDE](https://cursor.sh/) installed
+- ✅ [VSCode IDE](https://code.visualstudio.com/download/) installed
 - ✅ [Node.js](https://nodejs.org/) installed
 - ✅ Access to Azure DevOps
 
 ## 3 Simple Steps
 
-### 1️⃣ Clone & Build (in Cursor)
+### 1️⃣ Clone & Build (in VSCode)
 ```bash
-# In Cursor terminal (Ctrl+`)
-git clone https://github.com/EreAlexandru/ADOMCPLocalServer.git
+# In VSCode terminal (Ctrl+`)
+git clone https://github.com/fperez2511/Azure-Devops-MCP-Server-For-VSCode.git
 cd ADOMCPLocalServer
 npm install
 npm run build
@@ -25,8 +25,8 @@ AZURE_DEVOPS_PAT=your-token
 
 **⚠️ IMPORTANT:** The .env goes in the ROOT folder, not in src/ or dist/!
 
-### 3️⃣ Add to Cursor
-1. **File → Preferences → Cursor Settings → Tools & Integration**
+### 3️⃣ Add to VSCode
+1. **File → Preferences → VSCode Settings → Tools & Integration**
 2. Click **"New MCP Server"**
 3. Paste (update the path!):
 ```json
@@ -39,10 +39,10 @@ AZURE_DEVOPS_PAT=your-token
   }
 }
 ```
-4. **Restart Cursor**
+4. **Restart VSCode**
 
 ## ✅ Test It!
-In Cursor chat: *"List my Azure DevOps projects"*
+In VSCode chat: *"List my Azure DevOps projects"*
 
 ---
 

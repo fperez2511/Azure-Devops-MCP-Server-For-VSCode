@@ -1,7 +1,7 @@
 # Azure DevOps MCP Server - Copilot Instructions
 
 ## Overview
-This project provides a Model Context Protocol (MCP) server for Azure DevOps integration with Cursor IDE. It enables natural language interactions with Azure DevOps services.
+This project provides a Model Context Protocol (MCP) server for Azure DevOps integration with VSCode IDE. It enables natural language interactions with Azure DevOps services.
 
 ## Available Prompts (Guided Workflows)
 
@@ -39,7 +39,7 @@ The server includes pre-configured prompts for common workflows:
 23. **Defect Leakage Analysis** (`defect_leakage_analysis`) - Analyze defects found in production vs testing phases
 24. **Test Data Management** (`test_data_management`) - Review test data setup and requirements
 
-### Using Prompts in Cursor
+### Using Prompts in VSCode
 Simply ask naturally:
 - **For Developers:** "Help me prepare for standup in project Contoso"
 - **For QA Manual:** "Show test execution status for our current sprint"
