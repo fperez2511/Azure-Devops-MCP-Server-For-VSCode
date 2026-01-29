@@ -63,6 +63,10 @@ export const wikiTools: Tool[] = [
           type: 'string',
           description: 'Page content in Markdown',
         },
+        branch: {
+          type: 'string',
+          description: 'Branch name for code wikis (default: main)',
+        },
       },
       required: ['project', 'wikiIdentifier', 'path', 'content'],
     },

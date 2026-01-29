@@ -42,6 +42,7 @@ export async function handleGetWikiPage(
  * @param wikiIdentifier - Wiki name or ID
  * @param path - Page path
  * @param content - Page content in Markdown
+ * @param branch - Optional branch name for code wikis (default: main)
  * @returns MCP-formatted response with creation confirmation
  */
 export async function handleCreateWikiPage(
@@ -49,9 +50,10 @@ export async function handleCreateWikiPage(
   project: string,
   wikiIdentifier: string,
   path: string,
-  content: string
+  content: string,
+  branch?: string
 ) {
-  return await adoClient.createWikiPage(project, wikiIdentifier, path, content);
+  return await adoClient.createWikiPage(project, wikiIdentifier, path, content, branch);
 }
 
 /**

@@ -1898,11 +1898,14 @@ ${page.content}`,
     project: string,
     wikiIdentifier: string,
     path: string,
-    content: string
+    content: string,
+    branch: string = 'main'
   ) {
     try {
+      // Add versionDescriptor for code wikis
+      const versionDescriptor = `&versionDescriptor.versionType=branch&versionDescriptor.version=${encodeURIComponent(branch)}`;
       const response = await this.api.put(
-        `/${project}/_apis/wiki/wikis/${wikiIdentifier}/pages?path=${encodeURIComponent(path)}&api-version=7.0`,
+        `/${project}/_apis/wiki/wikis/${wikiIdentifier}/pages?path=${encodeURIComponent(path)}${versionDescriptor}&api-version=7.0`,
         { content },
         {
           headers: {

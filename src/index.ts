@@ -21,7 +21,7 @@ export const orgName = args[0] || process.env.AZURE_DEVOPS_ORG || '';
 
 // Only validate if we still don't have an org name after checking env vars
 if (!orgName) {
-  console.error("Usage: mcp-server-azuredevops <organization_name>");
+  console.error("Usage: azure-devops-mcp-local <organization_name>");
   console.error("Or set AZURE_DEVOPS_ORG in your .env file");
   process.exit(1);
 }
@@ -389,13 +389,14 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       }
 
       case 'create_wiki_page': {
-        const { project, wikiIdentifier, path, content } = args as {
+        const { project, wikiIdentifier, path, content, branch } = args as {
           project: string;
           wikiIdentifier: string;
           path: string;
           content: string;
+          branch?: string;
         };
-        return await handlers.handleCreateWikiPage(getAdoClient(), project, wikiIdentifier, path, content);
+        return await handlers.handleCreateWikiPage(getAdoClient(), project, wikiIdentifier, path, content, branch);
       }
 
       case 'update_wiki_page': {
